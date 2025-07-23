@@ -14,7 +14,12 @@ function Page() {
     revalidateOnFocus: true, // Refetch when tab is active
     dedupingInterval: 2000, // Avoid multiple requests in 2s
   });
-  const allOrders = data;
+  const allOrders = [];
+    if(data){
+    for (let i = data.length - 1; i >= 0; i--) {
+      allOrders.push(data[i]);
+    }
+  }
   const handleStatus = async (e, item) => {
     item.status = e.target.value;
     let res = await fetch("/api/order", {
