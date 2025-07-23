@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   await ConnectDB();
-  let alls = await Products.find({})..sort({ createdAt: -1 })
+  let alls = await Products.find({})
   return NextResponse.json(alls);
 }
 export async function POST(req) {
