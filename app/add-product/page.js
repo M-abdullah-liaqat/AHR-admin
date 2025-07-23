@@ -4,7 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import { Bounce } from "react-toastify";
 import MyContext from "../context/MyContext";
-function page() {
+function Page() {
   let session = useContext(MyContext);
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
@@ -433,4 +433,4 @@ function page() {
   }
 }
 
-export default page;
+export default Page;
