@@ -5,7 +5,7 @@ import { useState, useEffect, useContext } from "react";
 import MyContext from "../context/MyContext";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-function page() {
+function Page() {
   let session = useContext(MyContext);
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
@@ -177,4 +177,4 @@ function page() {
   }
 }
 
-export default page;
+export default Page;
