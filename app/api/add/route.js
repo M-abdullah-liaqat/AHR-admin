@@ -4,7 +4,13 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   await ConnectDB();
-  let alls = await Products.find({})
+   let alls = await Products.find({})
+    .then((item) => {
+      return item;
+    })
+    .catch((item) => {
+      return item;
+    });
   return NextResponse.json(alls);
 }
 export async function POST(req) {
